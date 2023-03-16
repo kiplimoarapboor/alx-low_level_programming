@@ -3,10 +3,6 @@
 ## About
 This repository contains code written while learning low level programming at [ALX](https://www.alxafrica.com/)
 
-Have a nice time with some of the code.
+Have a nice time with the code.
 
-Signed,
-
-__kiplimoboor__
-
-*a Gooner.*
+~ __kiplimoboor__
