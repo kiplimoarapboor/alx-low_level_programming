@@ -9,9 +9,11 @@
 
 int main(void)
 {
-	for (int i = 0; i <= 9; i++)
+	int i, j;
+
+	for (i = 0; i <= 9; i++)
 	{
-		for (int j = 1; j <= 9; j++)
+		for (j = 1; j <= 9; j++)
 		{
 			if (i != j && j > i)
 			{
@@ -21,11 +23,10 @@ int main(void)
 				{
 					putchar(',');
 					putchar(' ');
-				}
-				
+				}				
 			}
-
 		}
 	}
 	putchar('\n');
+	return (0);
 }
