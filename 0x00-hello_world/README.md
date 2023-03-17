@@ -2,4 +2,4 @@
 
 ## About
 
-C - Hello, World Assignment
+Introduction to C Programming language, through doing the C - Hello, World Assignments.

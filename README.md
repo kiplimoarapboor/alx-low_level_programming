@@ -3,10 +3,6 @@
 ## About
 This repository contains code written while learning low level programming at [ALX](https://www.alxafrica.com/)
 
-Have a nice time with some of the code.
+It contains all assignments and lessons learnt as basis for Software Engineering is formed.
 
-Signed,
-
-__kiplimoboor__
-
-*a Gooner.*
+~ __kiplimoboor__
