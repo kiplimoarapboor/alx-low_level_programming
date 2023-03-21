@@ -7,12 +7,12 @@
  *
  */
 
- void print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
 	int i = 0;
 	char j = 'a';
 
-	while (i <= 10)
+	while (i <= 9)
 	{
 		while (j <= 'z')
 		{
@@ -20,7 +20,7 @@
 			j++;
 		}
 		_putchar('\n');
-		i++;
 		j = 'a';
+		i++;
 	}
 }
