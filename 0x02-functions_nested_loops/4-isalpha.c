@@ -1,7 +1,7 @@
 /**
  * _isalpha - checks if c is an alphabet
  *
- * @c: the character to be checked
+ * @c: the entry to be checked
  *
  * Return: 1 is an alphabet, 0 is not an alphabet
  */
