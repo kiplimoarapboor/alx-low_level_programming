@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _islower- checks if character is lower or upper
  *
