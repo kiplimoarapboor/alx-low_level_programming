@@ -6,7 +6,7 @@
 
 void times_table(void)
 {
-	int i, j, product, ones, tens;
+	int i, j, product;
 
 	for (i = 0; i <= 9; i++)
 	{
@@ -20,10 +20,8 @@ void times_table(void)
 					_putchar(',');
 					_putchar(' ');
 				}
-				ones = product % 10;
-				tens = product / 10;
-				_putchar(48 + tens);
-				_putchar(48 + ones);
+				_putchar(48 + (product / 10));
+				_putchar(48 + (product % 10));
 			}
 			else if (product < 10)
 			{
