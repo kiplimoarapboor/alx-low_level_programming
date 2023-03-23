@@ -1,10 +1,10 @@
-#include "main.h"
-
 /**
  * main - prints '_putchar'
  *
  * Return: 0 is Success
  */
+
+int _putchar(char c);
 
 int main(void)
 {
