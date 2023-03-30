@@ -7,23 +7,27 @@
  *
  * Return: pointer to destination string
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, j = 0;
+	int m;
+	int i;
 
-	while (dest[i])
-		i++;
+	m = 0;
 
-	while (j <= n - 1)
+	for (i = 0; i < 1000; i++)
 	{
-		dest[i] = src[j];
-		j++;
-		i++;
-		if (src[j] == '\0')
+		if (dest[i] == '\0')
+		{
 			break;
+		}
+		m++;
 	}
 
-	dest[i] = '\0';
-
+	for (i = 0; src[i] != '\0' && i < n; i++)
+	{
+		dest[m + i] = src[i];
+	}
+	dest[m + i] = '\0';
 	return (dest);
 }
