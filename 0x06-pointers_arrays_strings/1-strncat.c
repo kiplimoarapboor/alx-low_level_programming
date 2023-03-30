@@ -1,5 +1,6 @@
 /**
- * _strncat- conditionally concatenates two strings such that only n bytes from one string is used
+ * _strncat- conditionally concatenates two strings such that
+ * only n bytes from one string is used
  *
  * @dest: pointer to destination address
  * @src: pointer to source string address
@@ -10,24 +11,19 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int m;
-	int i;
+	int i = 0, j = 0;
 
-	m = 0;
+	while (dest[i])
+		i++;
 
-	for (i = 0; i < 1000; i++)
+	while (j <= n - 1)
 	{
-		if (dest[i] == '\0')
-		{
+		dest[i] = src[j];
+		if (src[j] == '\0')
 			break;
-		}
-		m++;
+		i++;
+		j++;
 	}
 
-	for (i = 0; src[i] != '\0' && i < n; i++)
-	{
-		dest[m + i] = src[i];
-	}
-	dest[m + i] = '\0';
 	return (dest);
 }
