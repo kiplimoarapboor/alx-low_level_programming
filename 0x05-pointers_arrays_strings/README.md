@@ -2,4 +2,4 @@
 
 ## About
 
-C - Pointers, arrays and strings Assignment
+C - More Pointers, arrays and strings Assignment
