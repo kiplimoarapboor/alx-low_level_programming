@@ -30,7 +30,7 @@ void print_buffer(char *b, int size)
 				printf("  ");
 		}
 
-		printf (" ");
+		printf(" ");
 
 		for (k = i; k < i + 10; k++)
 		{
