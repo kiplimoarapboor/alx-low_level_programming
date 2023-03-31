@@ -17,19 +17,21 @@ void print_buffer(char *b, int size)
 		printf("%08x:", i);
 
 		for (j = i; j < i + 10; j++)
-		{	
+		{
 			if (j % 2 == 0)
 				printf(" ");
 
 			if (j < length)
 				printf("%02x", b[j]);
-			else
-				printf("  ");
-
-			if (j % 10 == 9)
-				printf(" ");
 		}
 
+		printf(" ");
+		
+		if (j > length)
+		{
+			printf("%*s", 2 * (j - length), "");
+		}
+				
 		for (k = i; k < i + 10; k++)
 		{
 			if (k < length)
