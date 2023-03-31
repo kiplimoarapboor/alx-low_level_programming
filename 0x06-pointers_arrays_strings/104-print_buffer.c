@@ -27,14 +27,11 @@ void print_buffer(char *b, int size)
 				printf(" ");
 			if (j < length)
 				printf("%02x", b[j]);
+			else
+				printf("  ");
 		}
 
 		printf(" ");
-
-		if (j > length)
-		{
-			printf("%*s", 2 * (j - length), "");
-		}
 
 		for (k = i; k < i + 10; k++)
 		{
