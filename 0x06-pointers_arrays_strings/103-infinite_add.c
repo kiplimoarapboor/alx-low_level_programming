@@ -46,7 +46,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if ((maxlen + 2) > size_r)
 			return (0);
 		memmove(&r[1], &r[0], maxlen + 1);
-        r[0] = '1';
+		r[0] = '1';
 	}
 	return (r);
 }
