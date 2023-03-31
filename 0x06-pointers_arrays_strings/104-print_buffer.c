@@ -1,46 +1,43 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
- * print_buffer- prints a buffer
- *
- * @b: pointer to the buffer
- * @size: the size of the buffer to be printed
+ * print_buffer - prints a buffer
+ * @b: buffer.
+ * @size: size of buffer.
+ * Return: no return.
  */
-
 void print_buffer(char *b, int size)
 {
-	int i, j, k;
+	int j, k, l;
 
 	if (size <= 0)
-	{
 		printf("\n");
-		return;
-	}
-	for (i = 0; i <= size; i += 10)
+	else
 	{
-		printf("%08x:", i);
-
-		for (j = i; j < i + 10; j++)
+		for (j = 0; j < size; j += 10)
 		{
-			if (j % 2 == 0)
-				printf(" ");
-			if (j < size)
-				printf("%02x", b[j]);
-			else
-				printf("  ");
+			printf("%.8x:", j);
+			for (k = j; k < j + 10; k++)
+			{
+				if (k % 2 == 0)
+					printf(" ");
+				if (k < size)
+					printf("%.2x", *(b + k));
+				else
+					printf("  ");
+			}
+			printf(" ");
+			for (l = j; l < j + 10; l++)
+			{
+				if (l >= size)
+					break;
+				if (*(b + l) < 32 || *(b + l) > 126)
+					printf("%c", '.');
+				else
+					printf("%c", *(b + l));
+			}
+			printf("\n");
 		}
-
-		printf(" ");
-
-		for (k = i; k < i + 10; k++)
-		{
-			if (k >= size)
-				break;
-			if (b[k] < 32 || b[k] > 126)
-				b[k] = '.';
-			putchar(b[k]);
-		}
-
-		printf("\n");
 	}
 }
