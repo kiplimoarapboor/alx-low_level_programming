@@ -15,20 +15,21 @@ void print_buffer(char *b, int size)
 	for (i = 0; i <= length; i += 10)
 	{
 		printf("%08x:", i);
+
 		for (j = i; j < i + 10; j++)
-		{
-			if (j < length)
-			{
-				if (j % 2 == 0)
-					printf(" ");
-				printf("%02x", b[j]);
-			}
-			else
-				printf("%*s", 10 - j  % 10, " ");
-			if (j % 10 == 9)
+		{	
+			if (j % 2 == 0)
 				printf(" ");
 
+			if (j < length)
+				printf("%02x", b[j]);
+			else
+				printf("  ");
+
+			if (j % 10 == 9)
+				printf(" ");
 		}
+
 		for (k = i; k < i + 10; k++)
 		{
 			if (k < length)
@@ -38,6 +39,7 @@ void print_buffer(char *b, int size)
 				putchar(b[k]);
 			}
 		}
+
 		printf("\n");
 	}
 }
