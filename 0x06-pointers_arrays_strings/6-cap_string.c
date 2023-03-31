@@ -11,6 +11,9 @@ char *cap_string(char *s)
 	int i, j;
 	char delimeter[] = " \t\n,;.!?\"(){}";
 
+	if (s[0] >= 97 && s[0] <= 122)
+		s[0] -= 32;
+
 	for (i = 0; s[i]; i++)
 	{
 		for (j = 0; delimeter[j]; j++)
