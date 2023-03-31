@@ -35,12 +35,12 @@ void print_buffer(char *b, int size)
 
 		for (k = i; k < i + 10; k++)
 		{
-			if (k < length)
-			{
-				if (b[k] < 32 || b[k] > 126)
-					b[k] = '.';
-				putchar(b[k]);
-			}
+			if (k >= size)
+				break;
+			if (b[k] < 32 || b[k] > 126)
+				b[k] = '.';
+			putchar(b[k]);
+
 		}
 
 		printf("\n");
