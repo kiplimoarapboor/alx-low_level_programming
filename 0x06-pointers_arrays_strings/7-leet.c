@@ -9,13 +9,13 @@
 char *leet(char *s)
 {
 	int i, j;
-	char src[] = "AEOTL", dest[] = "43071";
+	char src[] = "ol_ea__t";
 
 	for (i = 0; s[i]; i++)
 	{
 		for (j = 0; src[j]; j++)
 			if (s[i] == src[j] || s[i] == src[j] - 32)
-				s[i] = dest[j];
+				s[i] = j + '0';
 	}
 
 	return (s);
