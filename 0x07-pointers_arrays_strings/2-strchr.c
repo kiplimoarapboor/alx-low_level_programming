@@ -6,13 +6,17 @@
  *
  * Return: pointer to first occurence, NULL if no occurence
  */
+
 char *_strchr(char *s, char c)
 {
-	s++;
-	for (; *s != '\0'; s++)
+	while (*s)
 	{
+		s++;
+
 		if (*s == c)
+		{
 			return (s);
+		}
 	}
 
 	return ('\0');
