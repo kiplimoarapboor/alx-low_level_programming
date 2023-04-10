@@ -1,0 +1,3 @@
+void _strcpy(void)
+{
+}
