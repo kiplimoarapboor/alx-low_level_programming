@@ -3,8 +3,8 @@
 /**
  * main- prints every argument
  *
- * argc: number of arguments
- * argv: argument position
+ * @argc: number of arguments
+ * @argv: argument position
  *
  * Return: Always (0)
  */
