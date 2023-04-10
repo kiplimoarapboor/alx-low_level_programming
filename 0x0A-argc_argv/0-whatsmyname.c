@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/**
+ * main- prints the program name
+ *
+ * @argc: number of arguments
+ * @argv: the argument position
+ *
+ * Return: Always (0)
+ */
+
 int main(int argc, char *argv[])
 {
 	if (argc > 1)
