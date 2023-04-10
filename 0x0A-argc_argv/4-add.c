@@ -11,29 +11,22 @@
  * Return: Always (0), 1 is Error
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int i, num, sum = 0;
+	int i, sum = 0;
 
-	if (argc == 1)
-		printf("0\n");
-	else
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		if (atoi(argv[i]) == 0 && strcmp(argv[i], "0") != 0)
 		{
-			num = atoi(argv[i]);
-
-			if (num == 0 && strcmp(argv[i], "0") != 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
-
-			sum += num;
+			printf("Error\n");
+			return (1);
 		}
 
-		printf("%i\n", sum);
+		sum += atoi(argv[i]);
 	}
+
+	printf("%i\n", sum);
 
 	return (0);
 }
