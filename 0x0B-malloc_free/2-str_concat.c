@@ -21,14 +21,9 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	if (len1 > 0)
-	{
 		memcpy(array, s1, len1);
-	}
-
 	if (len2 > 0)
-	{
 		memcpy(array + len1, s2, len2);
-	}
 
 	array[len] = '\0';
 
