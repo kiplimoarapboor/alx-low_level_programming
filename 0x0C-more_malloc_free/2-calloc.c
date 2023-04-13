@@ -8,20 +8,24 @@
  *
  * Return: pointer to allocated memory
  */
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
-	void *ptr = malloc(nmemb * size);
-	char *init;
+	void *mem;
+	char *filler;
+	unsigned int index;
 
-	if (!(nmemb) || !(size) || ptr == NULL)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	init = ptr;
+	mem = malloc(size * nmemb);
 
-	for (i = 0; i < size * nmemb; i++)
-		init[i] = 0;
+	if (mem == NULL)
+		return (NULL);
 
-	return (ptr);
+	filler = mem;
+
+	for (index = 0; index < (size * nmemb); index++)
+		filler[index] = '\0';
+
+	return (mem);
 }
