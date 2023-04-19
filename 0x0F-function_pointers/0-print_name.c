@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * print_name- prints a name
  *
@@ -7,7 +9,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name)
+	if (name != NULL)
 		f(name);
 }
 
