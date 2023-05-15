@@ -2,4 +2,4 @@
 
 ## About
 
-C - Singly linked list
+C - Singly linked list Assignment
