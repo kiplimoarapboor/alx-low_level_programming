@@ -2,4 +2,4 @@
 
 ## About
 
-0x12. C - Singly linked list
+C - Singly linked list
