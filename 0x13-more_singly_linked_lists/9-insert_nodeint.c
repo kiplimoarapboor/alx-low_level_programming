@@ -19,17 +19,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!new)
 		return (NULL);
 
-	length = listint_len((*head));
+	length = listint_len(*head);
 
 	if (idx > length)
 		return (NULL);
 
 	new->n = n;
+	new->next = NULL;
 
 	if (idx == 0)
 	{
-		new->next = (*head);
-		(*head) = new;
+		new->next = *head;
+		*head  = new;
 	}
 	else
 	{
@@ -38,26 +39,26 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new->next = temp->next;
 		temp->next = new;
 	}
+
 	return (*head);
 }
 
 /**
- * listint_len-finds the length of linked list
- *
- * @h: the list
- *
- * Return: the length of the list
- */
+ * listint_len - return number of elements in a linked list.
+ * @h: pointer to a singly linked list.
+ * Return: an int.
+ **/
 
 size_t listint_len(const listint_t *h)
 {
-	unsigned int len = 0;
+	const listint_t *temp;
+	unsigned int count = 0;
 
-	while (h)
+	temp = h;
+	while (temp)
 	{
-		len++;
-		h = h->next;
+		count += 1;
+		temp = temp->next;
 	}
-
-	return (len);
+	return (count);
 }
